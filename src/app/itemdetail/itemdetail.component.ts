@@ -7,4 +7,21 @@ import { Component } from '@angular/core';
 })
 export class ItemdetailComponent {
 
+  quantity: number = 1
+
+  up() {
+    if (this.quantity < 10) {
+      this.quantity++;
+      // @ts-ignore
+      document.getElementById("quantity").value = this.quantity
+    }
+  }
+
+  down() {
+    if (this.quantity > 0 ) {
+      this.quantity--;
+      // @ts-ignore
+      document.getElementById("quantity").value = this.quantity
+    }
+  }
 }

@@ -44,7 +44,17 @@
           </div>
           <div class="product-page-cart">
             <div class="product-quantity">
-              <input id="product-quantity" type="text" value="1" readonly name="product-quantity" class="form-control input-sm">
+              <span class="input-group-btn">
+                    <a class="btn quantity-up bootstrap-touchspin-up" type="button" (click)="up()">
+                      <i class="fa fa-angle-up"></i>
+                    </a>
+                  </span>
+              <input id="quantity" type="number" value="1" readonly class="form-control input-sm">
+              <span class="input-group-btn">
+                    <a class="btn quantity-down bootstrap-touchspin-down" type="button" (click)="down()">
+                      <i class="fa fa-angle-down"></i>
+                    </a>
+                  </span>
             </div>
             <a href="itemDetail/cardList" class="btn btn-primary" type="submit">Thêm vào giỏ</a>
             <!--          <a (click)="itemDetail()" class="btn btn-default">Xem chi tiết</a>-->
